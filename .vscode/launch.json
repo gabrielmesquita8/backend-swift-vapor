@@ -1,0 +1,22 @@
+{
+    "configurations": [
+        {
+            "type": "swift",
+            "request": "launch",
+            "args": [],
+            "cwd": "${workspaceFolder:backend_xctest}",
+            "name": "Debug backend_xctest",
+            "program": "${workspaceFolder:backend_xctest}/.build/debug/backend_xctest",
+            "preLaunchTask": "swift: Build Debug backend_xctest"
+        },
+        {
+            "type": "swift",
+            "request": "launch",
+            "args": [],
+            "cwd": "${workspaceFolder:backend_xctest}",
+            "name": "Release backend_xctest",
+            "program": "${workspaceFolder:backend_xctest}/.build/release/backend_xctest",
+            "preLaunchTask": "swift: Build Release backend_xctest"
+        }
+    ]
+}
