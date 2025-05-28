@@ -11,11 +11,11 @@ public func configure(_ app: Application) async throws {
 
     // Configure local DB connection
     app.databases.use(.postgres(
-        hostname: Environment.get("DATABASE_HOST") ?? "localhost",
-        port: Environment.get("DATABASE_PORT").flatMap(Int.init(_:)) ?? SQLPostgresConfiguration.ianaPortNumber,
-        username: Environment.get("DATABASE_USERNAME") ?? "vapor_user",
-        password: Environment.get("DATABASE_PASSWORD") ?? "vapor_password",
-        database: Environment.get("DATABASE_NAME") ?? "vapor_db"
+        hostname: "localhost",
+        port: 5432,
+        username: "vapor_user",
+        password: "vapor_password",
+        database: "vapor_db"
     ), as: .psql)
 
     // Migration

@@ -1,7 +1,7 @@
 import Fluent
 import Vapor
 
-final class Gym: Model, Content, @unchecked Sendable {
+final class User: Model, Content, @unchecked Sendable {
     static let schema: String = "users"
     @ID(key: .id)
     var id: UUID?
@@ -13,7 +13,7 @@ final class Gym: Model, Content, @unchecked Sendable {
     var email: String
     
     @Field(key: "joined")
-    var joined: Double
+    var joined: Double?
     
     // Initialization
     init()  { }
