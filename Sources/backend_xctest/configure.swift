@@ -20,4 +20,5 @@ public func configure(_ app: Application) async throws {
 
     // Migration
     app.migrations.add(CreateUserTableMigration())
+    app.migrations.add(CreateItemTableMigration())
 }
